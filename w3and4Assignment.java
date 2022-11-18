@@ -4,7 +4,7 @@ public class w3and4Assignment {
 
 	public static void main(String[] args) {
 		//1 a (original without 55)
-		int ages[] = {3, 9, 23, 64, 2, 8, 28, 93, 55};
+		int[] ages = {3, 9, 23, 64, 2, 8, 28, 93, 55};
 		int result = ages[ages.length-2] - ages[0];
 		System.out.println("1a: " + result);
 		
@@ -40,7 +40,7 @@ public class w3and4Assignment {
 		int[] nameLengths = new int[names.length];
 		for (int i=0; i< names.length; i++) {
 			nameLengths[i]= names[i].length();
-			System.out.println("5: " + nameLengths[i]);
+			System.out.println(nameLengths[i]);
 		}
 		//6 
 		int sum = 0;
@@ -55,10 +55,10 @@ public class w3and4Assignment {
 		//9
 		System.out.println("9: " + isIt100(ages));
 		//10
-		double doubleArray[] = {25.5, 30.2, 55.05, 13, 22.75};
+		double[] doubleArray = {25.5, 30.2, 55.05, 13, 22.75};
 		System.out.println("10: " + arrayAvg(doubleArray));
 		//11
-		double doubleDub[] = {3.3, 30.5, 46.07, 33.6};
+		double[] doubleDub = {3.3, 30.5, 46.07, 33.6};
 		System.out.println("11: " + isString1Greater(doubleArray, doubleDub));
 		//12
 		System.out.println("12: " + willBuyDrink(true, 11.00));
@@ -110,6 +110,7 @@ public class w3and4Assignment {
 	
 	//for 13, method lightsGoOnOrOff helps us decide whether you should turn on
 	//lights for a room, based on occupancy and daylight
+	//Used as a communication tool for my husband to preserve energy
 	
 	public static String lightsGoOnOrOff (boolean isItDark, int numberOfPeople ) {
 		if (isItDark && numberOfPeople > 0) {
